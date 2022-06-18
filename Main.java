@@ -1,5 +1,3 @@
-package calc;
-
 import java.util.*;
 import java.util.stream.Stream;
 

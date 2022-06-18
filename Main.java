@@ -27,17 +27,16 @@ class Data {
 
     static void inputCheck(String userInput) {
         String[] userInputSplited = userInput.split(" ");
-        if (userInput.length() >= 5 && userInput.length() <= 11 && userInputSplited.length == 3 && operators.contains(userInputSplited[1])) {
+        if (userInput.length() >= 5 && userInput.length() <= 11 && userInputSplited.length == 3 
+            && operators.contains(userInputSplited[1])) {
             operator = userInputSplited[1];
             if (arabicNumbers.contains(userInputSplited[0]) && arabicNumbers.contains(userInputSplited[2])) {
                 strX = userInputSplited[0];
                 strY = userInputSplited[2];
-                operator = userInputSplited[1];
                 numbersType = "Arabic";
             } else if (romanNumbers.contains(userInputSplited[0]) && romanNumbers.contains(userInputSplited[2])) {
                 strX = arabicNumbers.get(romanNumbers.indexOf(userInputSplited[0]));
                 strY = arabicNumbers.get(romanNumbers.indexOf(userInputSplited[2]));
-                operator = userInputSplited[1];
                 numbersType = "Roman";
             } else {
                 throw new NumberFormatException("Wrong input");

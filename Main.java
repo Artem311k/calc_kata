@@ -27,8 +27,7 @@ class Data {
 
     static void inputCheck(String userInput) {
         String[] userInputSplited = userInput.split(" ");
-        if (userInput.length() >= 5 && userInput.length() <= 11 && userInputSplited.length == 3 
-            && operators.contains(userInputSplited[1])) {
+        if (userInputSplited.length == 3 && operators.contains(userInputSplited[1])) {
             operator = userInputSplited[1];
             if (arabicNumbers.contains(userInputSplited[0]) && arabicNumbers.contains(userInputSplited[2])) {
                 strX = userInputSplited[0];

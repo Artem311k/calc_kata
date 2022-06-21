@@ -62,10 +62,18 @@ class Calculator {
 
     static int calculate() {
         switch (Data.operator) {
-            case "*" -> result = X * Y;
-            case "/" -> result = X / Y;
-            case "+" -> result = X + Y;
-            case "-" -> result = X - Y;
+            case "*" :
+                result = X * Y;
+                break;
+            case "/" :
+                result = X / Y;
+                break;
+            case "+" :
+                result = X + Y;
+                break;
+            case "-" :
+                result = X - Y;
+                break;
         }
         return result;
     }
